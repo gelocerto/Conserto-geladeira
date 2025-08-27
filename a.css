@@ -6,6 +6,8 @@
 
 }
 
+
+  
 .logo1 {
 width: 250px;
 }
@@ -232,9 +234,7 @@ width: 100px;
     padding: 100px;
     background-color: #3b8bca;
 }
-#rodape{
-  
-}
+
 #logosrodape{
   display: flex
 ;
@@ -270,7 +270,117 @@ width: 100px;
     align-items: flex-end;
 }
 #imagensrodape{
-  display: flex
-;
+  display: flex;
     align-items: center;
+}
+
+/* Estilos gerais já estão aí em cima, só adicionamos o responsivo */
+
+/* Responsividade para tablets e celulares */
+@media (max-width: 1024px) {
+  .logo-cabeçalho {
+    margin-left: 20px;  /* diminui espaçamento */
+  }
+
+  .ligação1 {
+    margin-left: auto; /* empurra pro canto */
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  .cabeçalho {
+    flex-wrap: wrap; /* quebra linha se faltar espaço */
+    justify-content: space-between;
+  }
+
+  .cabeçalhos {
+    gap: 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Cabeçalho no celular */
+  .cabeçalho {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo1 {
+    width: 180px;
+  }
+
+  .cabeçalhos {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .ligação1 {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  /* Sessão principal */
+  .principal1 {
+    flex-direction: column;  /* Texto em cima e carrossel embaixo */
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .texto {
+    margin: 0;
+    text-align: center;
+  }
+
+  .titulo-1 {
+    font-size: 26px;
+  }
+
+  .carrossel {
+    width: 90%;
+    height: 300px;
+  }
+
+  /* Sessão agendamento */
+  .principal2 {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .caixatexto1 {
+    flex-direction: column;
+    font-size: 20px;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .caixatexto1 img {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  /* Marcas */
+  #marcas {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  #marcas img {
+    width: 80px;
+  }
+
+  /* Rodapé */
+  #logosrodape {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  #rodape-1 {
+    margin-left: 0;
+    justify-content: center;
+  }
 }
