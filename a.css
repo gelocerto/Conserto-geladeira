@@ -4,6 +4,13 @@
   padding: 0px 0px 0px 0px;
   font-family: roboto;
 
+  /* Reset geral para todos os botões */
+button {
+    all: unset;          /* remove todos os estilos herdados e padrões */
+    display: inline-block; /* mantém o botão como elemento visível */
+    cursor: pointer;      /* deixa o cursor de mãozinha */
+}
+
 }
 
 
@@ -139,6 +146,7 @@ background-color: #3b8bca;
 margin-top: 40px;
 margin-left: 130px;
 padding: 20px;
+
 }
 
 .caixasemtexto1 {
@@ -279,7 +287,7 @@ width: 100px;
 /* Responsividade para tablets e celulares */
 @media (max-width: 1024px) {
   .logo-cabeçalho {
-    margin-left: 20px;  /* diminui espaçamento */
+    margin-left: 0px;  /* diminui espaçamento */
   }
 
   .ligação1 {
@@ -313,11 +321,11 @@ width: 100px;
 
   .cabeçalhos {
     flex-direction: column;
-    margin-top: 10px;
+    margin-top:  0px;
   }
 
   .ligação1 {
-    margin: 10px 0;
+    margin: 0px 0;
     text-align: center;
   }
 
@@ -382,5 +390,208 @@ width: 100px;
   #rodape-1 {
     margin-left: 0;
     justify-content: center;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .cabeçalho {
+    flex-direction: row;        /* mantém em linha (igual no PC) */
+    justify-content: space-between; 
+    align-items: center;
+    gap: 10px; /* diminui espaço entre os elementos */
+    padding: 0 10px; /* coloca respiro lateral */
+  }
+
+  .logo1 {
+    width: 190px;  /* logo menor para caber */
+  }
+
+  .cabeçalhos {
+    gap: 10px;         /* menu mais compacto */
+    font-size: 14px;   /* reduz fonte */
+  }
+
+  .ligação1 {
+    font-size: 12px;   /* texto menor */
+    padding: 5px 8px;  /* botão mais compacto */
+    margin-left: 0;    /* tira espaço exagerado */
+  }
+}
+
+@media (max-width: 768px) {
+  .cabeçalho {
+    display: flex;
+    justify-content: center;   /* centraliza logo + menu na mesma linha */
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    padding: 10px;
+  }
+
+  .logo-cabeçalho {
+    margin: 0;
+  }
+
+  .cabeçalhos {
+    display: flex;             /* deixa os parágrafos em linha */
+    flex-direction: row;       /* garante que fique um do lado do outro */
+    justify-content: center;   /* centraliza no espaço */
+    gap: 12px;                 /* espaço entre os itens */
+    font-size: 14px;
+  }
+
+  .ligação1 {
+    margin-top: 10px;          /* manda para baixo do cabeçalho */
+    text-align: center;
+    font-size: 14px;
+    padding: 6px 12px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;        /* centraliza */
+  }
+}
+
+@media (max-width: 768px) {
+  .borçamento1 {
+    display: block;         /* garante que seja tratada como bloco */
+    margin-left: auto;      /* centraliza horizontalmente */
+    margin-right: auto;
+    text-align: center;     /* centraliza o conteúdo dentro dela */
+  }
+}
+
+@media (max-width: 768px) {
+  .carrosel {
+    width: 100%;        /* ocupa toda a largura da tela */
+    max-width: 100%;    /* garante que não fique menor */
+    height: 800px;      /* aumenta a altura (ajuste o valor conforme quiser) */
+  }
+}
+
+@media (max-width: 768px) {
+  .carrossel {
+    width: 100% !important;   /* força ocupar toda a largura */
+    height: 520px !important; /* aumenta a altura */
+  }
+}
+
+/* Mantém o estilo original do botão borçamento1 */
+.borçamento1 {
+    margin-top: 40px;
+    margin-left: 130px;
+    padding: 20px;
+    background-color: green; /* exemplo de cor original */
+    color: white;              /* cor do texto */
+    border-radius: 5px;        /* borda arredondada */
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.borçamento1 {
+    margin-top: 40px;
+    margin-left: 130px;
+    padding: 1px 1px; /* reduz o tamanho do botão */
+    font-size: 16px;    /* opcional: ajuste o tamanho do texto */
+}
+
+
+
+.borçamento1 {
+    display: block;
+    margin: 7px auto 5px auto;
+    padding: 10px 0px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: green;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 235px;
+    text-align: center;
+    }
+
+    .espaçamento{
+      margin-top: 40px;
+    }
+
+    .ligação1{
+      border-radius: 10px;
+    }
+
+  #imagem{
+    text-align: center;
+    margin-top: 79px;
+  }
+  #jp{
+    border-radius: 30px;
+  }
+
+  #imagem1{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+  }
+  #cabedelo{
+    width: 500px;
+    border-radius: 30px;
+  }
+  #santarita{width: 500px;
+  border-radius: 30px;}
+  #bayeux{width: 500px;
+  border-radius: 30px;}
+  /* Imagens das cidades */
+#jp,
+#cabedelo,
+#santarita,
+#bayeux {
+  width: 100%;          /* ocupa toda a largura do container */
+  max-width: 500px;     /* não passa de 500px em telas grandes */
+  border-radius: 30px;
+  height: auto;         /* mantém proporção */
+}
+
+/* Container das imagens */
+#imagem1 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;      /* permite quebra em telas menores */
+  gap: 20px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+/* Responsivo para tablet */
+@media (max-width: 1024px) {
+  #imagem1 {
+    justify-content: center;
+  }
+  #jp,
+  #cabedelo,
+  #santarita,
+  #bayeux {
+    max-width: 350px; /* reduz um pouco no tablet */
+  }
+}
+
+/* Responsivo para celular */
+@media (max-width: 768px) {
+  #imagem1 {
+    flex-direction: column; /* imagens em coluna */
+    align-items: center;
+  }
+  #jp,
+  #cabedelo,
+  #santarita,
+  #bayeux {
+    max-width: 90%; /* ocupa quase toda a tela */
+  }
+}
+/* Centralizar os textos das cidades no celular */
+@media (max-width: 768px) {
+  .caixasemtexto1 {
+    text-align: center;
   }
 }
